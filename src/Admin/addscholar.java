@@ -1,0 +1,326 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Admin;
+
+import Config.config;
+import java.awt.Color;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+/**
+ *
+ * @author Dell
+ */
+public class addscholar extends javax.swing.JFrame {
+
+   
+
+    // PLACE IT HERE (Right at the top, before the constructor)
+    public int itemId = 0; 
+
+   
+    public addscholar() {      
+    // Check if the user is logged in before showing the UI
+    if (Config.Session.userId == 0) {
+        javax.swing.JOptionPane.showMessageDialog(null, "Login Required! Please log in to add items.");
+        // Adjust the path below to match your actual Login file location
+        new Main.Login().setVisible(true); 
+        this.dispose();
+        return; 
+    }
+    
+    initComponents();
+}
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        firstname = new javax.swing.JTextField();
+        lastname = new javax.swing.JTextField();
+        place = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        addU = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        Item = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        Type = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        timedate = new javax.swing.JTextField();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Berlin Sans FB", 0, 48)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("ADD SCHOLAR");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 330, 104));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 130));
+
+        jPanel4.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel4.setForeground(new java.awt.Color(0, 153, 153));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel4.add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 240, 40));
+        jPanel4.add(lastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 30, 240, 40));
+
+        place.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                placeActionPerformed(evt);
+            }
+        });
+        jPanel4.add(place, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 170, 240, 40));
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel16.setText("First Name");
+        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel17.setText("Last Name:");
+        jPanel4.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, -1, -1));
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel19.setText("User type:");
+        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, -1, -1));
+
+        addU.setBackground(new java.awt.Color(102, 102, 102));
+        addU.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addU.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addUMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                addUMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                addUMouseExited(evt);
+            }
+        });
+        addU.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel11.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("ADD SCHOLAR");
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
+        addU.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 170, -1));
+
+        jPanel4.add(addU, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 240, 50));
+
+        Item.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ItemActionPerformed(evt);
+            }
+        });
+        jPanel4.add(Item, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 240, 40));
+
+        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel20.setText("Scholar");
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, -1, -1));
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel21.setText("Time & date");
+        jPanel4.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+
+        Type.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TypeActionPerformed(evt);
+            }
+        });
+        jPanel4.add(Type, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, 240, 40));
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel22.setText("Place/ location ");
+        jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, -1));
+
+        timedate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                timedateActionPerformed(evt);
+            }
+        });
+        jPanel4.add(timedate, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 240, 40));
+
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 920, 370));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 613, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        pack();
+        setLocationRelativeTo(null);
+    }// </editor-fold>//GEN-END:initComponents
+    
+    public void setColor(JPanel p){
+        p.setBackground(new Color(240, 240, 240));
+    }
+    
+    public void resetColor(JPanel p2){
+        p2.setBackground(new Color(102, 102, 102));
+    }
+    
+    private void addUMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addUMouseEntered
+        setColor(addU);
+    }//GEN-LAST:event_addUMouseEntered
+
+    private void addUMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addUMouseExited
+        resetColor(addU);
+    }//GEN-LAST:event_addUMouseExited
+
+    private void addUMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addUMouseClicked
+                                  
+                                    
+                                           
+                                 
+    config conf = new config();
+    
+    if (Item.getText().isEmpty() || timedate.getText().isEmpty() || place.getText().isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Please fill in the Item Name, Time, and Location!");
+    } else {
+        String fullName = firstname.getText() + " " + (lastname.getText().isEmpty() ? "" : lastname.getText());
+        
+        if (jLabel11.getText().equals("UPDATE")) {
+            // SQL for Updating
+            String sql = "UPDATE tbl_items SET item_name = ?, item_time = ?, item_location = ?, "
+                       + "item_type = ?, reported_by = ? WHERE item_id = ?";
+            
+            conf.updateRecord(sql, Item.getText(), timedate.getText(), place.getText(), Type.getText(), fullName, String.valueOf(itemId));
+            JOptionPane.showMessageDialog(null, "Item Updated Successfully!");
+            
+        } else { 
+            // SQL for New Entry
+            String sql = "INSERT INTO tbl_items (item_name, item_time, item_location, item_type, reported_by, item_status) "
+                       + "VALUES (?, ?, ?, ?, ?, ?)";
+            
+            conf.addRecord(sql, Item.getText(), timedate.getText(), place.getText(), Type.getText(), fullName, "Pending");
+            JOptionPane.showMessageDialog(null, "Item Successfully Registered!");
+        }
+
+        // Return to the list
+        new ManageScholar().setVisible(true);
+        this.dispose();
+    }
+
+
+    
+
+    }//GEN-LAST:event_addUMouseClicked
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+                                           
+    addUMouseClicked(evt); // This tells the label to do whatever the panel does
+
+    }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void placeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_placeActionPerformed
+
+    private void TypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TypeActionPerformed
+
+    private void timedateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timedateActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_timedateActionPerformed
+
+    private void ItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ItemActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(addscholar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(addscholar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(addscholar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(addscholar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new addscholar().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JTextField Item;
+    public javax.swing.JTextField Type;
+    private javax.swing.JPanel addU;
+    public javax.swing.JTextField firstname;
+    private javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JTextField lastname;
+    public javax.swing.JTextField place;
+    public javax.swing.JTextField timedate;
+    // End of variables declaration//GEN-END:variables
+}
