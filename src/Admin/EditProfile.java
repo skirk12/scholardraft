@@ -23,7 +23,7 @@ public class EditProfile extends javax.swing.JFrame {
     
     int userId;
     
-    public EditProfile(int a_id, String fname, String lname, String email, String type) {      
+    public EditProfile(int a_id, String u_fname, String u_lname, String u_email, String u_type) {      
     // ... keep everything else inside the same      
     // 1. SESSION CHECK (Place this first)
     if (Config.Session.userId == 0) {
@@ -37,11 +37,11 @@ public class EditProfile extends javax.swing.JFrame {
     initComponents();
     
     // 3. ASSIGN DATA
-    userId = a_id;
-    fname.setText(fname);
-    lname.setText(lname);
-    Email.setText(email);   
-    Type.setText(type);
+    this.userId = a_id;         // Sets the global userId variable
+    fname.setText(u_fname);     // Sets the 'fname' TextField using the 'u_fname' String
+    lname.setText(u_lname);     // Sets the 'lname' TextField using the 'u_lname' String
+    Email.setText(u_email);     // Sets the 'Email' TextField using the 'u_email' String
+    Type.setText(u_type);
 }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

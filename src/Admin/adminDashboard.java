@@ -63,7 +63,7 @@ public class adminDashboard extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 153, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -74,7 +74,7 @@ public class adminDashboard extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 130));
 
-        logoutBtn.setBackground(new java.awt.Color(102, 102, 102));
+        logoutBtn.setBackground(new java.awt.Color(0, 153, 255));
         logoutBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         logoutBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -104,7 +104,7 @@ public class adminDashboard extends javax.swing.JFrame {
 
         jPanel1.add(logoutBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 520, -1, 80));
 
-        Approve.setBackground(new java.awt.Color(102, 102, 102));
+        Approve.setBackground(new java.awt.Color(0, 153, 255));
         Approve.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Approve.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -140,7 +140,7 @@ public class adminDashboard extends javax.swing.JFrame {
 
         jPanel1.add(Approve, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 440, -1, 80));
 
-        Profile.setBackground(new java.awt.Color(102, 102, 102));
+        Profile.setBackground(new java.awt.Color(51, 153, 255));
         Profile.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Profile.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -177,7 +177,7 @@ public class adminDashboard extends javax.swing.JFrame {
 
         jPanel1.add(Profile, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, -1, -1));
 
-        Users.setBackground(new java.awt.Color(102, 102, 102));
+        Users.setBackground(new java.awt.Color(0, 153, 255));
         Users.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Users.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -213,7 +213,7 @@ public class adminDashboard extends javax.swing.JFrame {
 
         jPanel1.add(Users, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, -1, -1));
 
-        Home.setBackground(new java.awt.Color(102, 102, 102));
+        Home.setBackground(new java.awt.Color(51, 153, 255));
         Home.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Home.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -242,7 +242,7 @@ public class adminDashboard extends javax.swing.JFrame {
             .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
         );
 
-        jPanel1.add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, -1, -1));
+        jPanel1.add(Home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 250, -1));
 
         jPanel3.setBackground(new java.awt.Color(51, 153, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -277,14 +277,11 @@ public class adminDashboard extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(39, 39, 39))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -402,11 +399,11 @@ this.dispose();
            
     
     public void setColor(JPanel p){
-        p.setBackground(new Color(240, 240, 240));
+        p.setBackground(new Color(51,255,255));
     }
     
     public void resetColor(JPanel p2){
-        p2.setBackground(new Color(102, 102, 102));
+        p2.setBackground(new Color(0,153,255));
     }
     
     /**

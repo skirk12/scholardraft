@@ -34,7 +34,7 @@ public class Register extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -72,15 +72,14 @@ public class Register extends javax.swing.JFrame {
         jLabel2.setText("©2026 The Scholarship Sysytem");
         jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 650, -1, -1));
 
-        jLabel3.setBackground(new java.awt.Color(0, 153, 153));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/gab1.png"))); // NOI18N
-        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 230, 170));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/image-removgab(1).png"))); // NOI18N
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 290, 230));
 
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 440, 680));
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 440, 700));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 720));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 740));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setBackground(new java.awt.Color(102, 204, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT", 1, 29)); // NOI18N
@@ -144,7 +143,7 @@ public class Register extends javax.swing.JFrame {
         });
         jPanel3.add(loginbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 620, 70, 40));
 
-        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel4.setBackground(new java.awt.Color(51, 153, 255));
 
         jLabel14.setBackground(new java.awt.Color(51, 204, 255));
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
@@ -162,8 +161,8 @@ public class Register extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -290,6 +289,7 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JPasswordField confpass;
     private javax.swing.JTextField email;
     private javax.swing.JTextField firstname;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -297,7 +297,6 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

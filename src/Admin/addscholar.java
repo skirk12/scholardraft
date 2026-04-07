@@ -24,13 +24,7 @@ public class addscholar extends javax.swing.JFrame {
    
     public addscholar() {      
     // Check if the user is logged in before showing the UI
-    if (Config.Session.userId == 0) {
-        javax.swing.JOptionPane.showMessageDialog(null, "Login Required! Please log in to add items.");
-        // Adjust the path below to match your actual Login file location
-        new Main.Login().setVisible(true); 
-        this.dispose();
-        return; 
-    }
+
     
     initComponents();
 }
@@ -41,20 +35,15 @@ public class addscholar extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        firstname = new javax.swing.JTextField();
-        lastname = new javax.swing.JTextField();
-        place = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         addU = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        Item = new javax.swing.JTextField();
+        Scholar = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        Type = new javax.swing.JTextField();
+        Category = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
-        timedate = new javax.swing.JTextField();
+        Description = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,29 +64,12 @@ public class addscholar extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(0, 153, 153));
         jPanel4.setForeground(new java.awt.Color(0, 153, 153));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel4.add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 240, 40));
-        jPanel4.add(lastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 30, 240, 40));
-
-        place.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                placeActionPerformed(evt);
-            }
-        });
-        jPanel4.add(place, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 170, 240, 40));
-
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel16.setText("First Name");
-        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
-
-        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel17.setText("Last Name:");
-        jPanel4.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 40, -1, -1));
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel19.setText("User type:");
-        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, -1, -1));
+        jLabel19.setText("Catergory");
+        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 50, -1, -1));
 
-        addU.setBackground(new java.awt.Color(102, 102, 102));
+        addU.setBackground(new java.awt.Color(51, 153, 255));
         addU.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         addU.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -124,38 +96,37 @@ public class addscholar extends javax.swing.JFrame {
 
         jPanel4.add(addU, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 240, 50));
 
-        Item.addActionListener(new java.awt.event.ActionListener() {
+        Scholar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ItemActionPerformed(evt);
+                ScholarActionPerformed(evt);
             }
         });
-        jPanel4.add(Item, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 240, 40));
+        jPanel4.add(Scholar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 240, 40));
 
         jLabel20.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel20.setText("Scholar");
-        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, -1, -1));
+        jLabel20.setText("Scholar Name");
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
 
         jLabel21.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel21.setText("Time & date");
-        jPanel4.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
+        jLabel21.setText("Description");
+        jPanel4.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
 
-        Type.addActionListener(new java.awt.event.ActionListener() {
+        Category.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TypeActionPerformed(evt);
+                CategoryActionPerformed(evt);
             }
         });
-        jPanel4.add(Type, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, 240, 40));
+        jPanel4.add(Category, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 40, 240, 40));
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel22.setText("Place/ location ");
         jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, -1));
 
-        timedate.addActionListener(new java.awt.event.ActionListener() {
+        Description.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                timedateActionPerformed(evt);
+                DescriptionActionPerformed(evt);
             }
         });
-        jPanel4.add(timedate, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 240, 40));
+        jPanel4.add(Description, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, 240, 40));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 920, 370));
 
@@ -194,38 +165,45 @@ public class addscholar extends javax.swing.JFrame {
 
     private void addUMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addUMouseClicked
                                   
-                                    
-                                           
-                                 
-    config conf = new config();
+config conf = new config();
     
-    if (Item.getText().isEmpty() || timedate.getText().isEmpty() || place.getText().isEmpty()) {
-        JOptionPane.showMessageDialog(null, "Please fill in the Item Name, Time, and Location!");
+    // Mapping your UI fields to variables
+    String itemName = Scholar.getText();          // Scholar Name field
+    String categoryStr = Category.getText();       // Category field
+    String description = Description.getText();   // Description field (currently named timedate)
+    
+    // Since you don't have a "Deadline" field in the image, 
+    // we'll set a default or use a placeholder to avoid SQL errors.
+    String deadline = "Not Set"; 
+
+    // 1. Validation: Ensure important fields aren't empty
+    if (itemName.isEmpty() || categoryStr.isEmpty() || description.isEmpty()) {
+        JOptionPane.showMessageDialog(null, "Please fill in Name, Category, and Description!");
     } else {
-        String fullName = firstname.getText() + " " + (lastname.getText().isEmpty() ? "" : lastname.getText());
-        
+
         if (jLabel11.getText().equals("UPDATE")) {
-            // SQL for Updating
-            String sql = "UPDATE tbl_items SET item_name = ?, item_time = ?, item_location = ?, "
-                       + "item_type = ?, reported_by = ? WHERE item_id = ?";
-            
-            conf.updateRecord(sql, Item.getText(), timedate.getText(), place.getText(), Type.getText(), fullName, String.valueOf(itemId));
-            JOptionPane.showMessageDialog(null, "Item Updated Successfully!");
-            
+            // --- UPDATE LOGIC ---
+            // SQL order: s_name, s_category, s_status, s_description, s_deadline WHERE s_id
+            String sql = "UPDATE tbl_scholarship SET s_name = ?, s_category = ?, s_status = ?, "
+                       + "s_description = ?, s_deadline = ? WHERE s_id = ?";
+
+            conf.updateRecord(sql, itemName, categoryStr, "Active", description, deadline, itemId);
+            JOptionPane.showMessageDialog(null, "Scholarship Updated Successfully!");
+
         } else { 
-            // SQL for New Entry
-            String sql = "INSERT INTO tbl_items (item_name, item_time, item_location, item_type, reported_by, item_status) "
-                       + "VALUES (?, ?, ?, ?, ?, ?)";
-            
-            conf.addRecord(sql, Item.getText(), timedate.getText(), place.getText(), Type.getText(), fullName, "Pending");
-            JOptionPane.showMessageDialog(null, "Item Successfully Registered!");
+            // --- INSERT LOGIC ---
+            // Matches columns: s_name, s_category, s_status, s_description, s_deadline
+            String sql = "INSERT INTO tbl_scholarship (s_name, s_category, s_status, s_description, s_deadline) "
+                       + "VALUES (?, ?, ?, ?, ?)";
+
+            conf.addRecord(sql, itemName, categoryStr, "Active", description, deadline);
+            JOptionPane.showMessageDialog(null, "Scholarship Successfully Registered!");
         }
 
-        // Return to the list
+        // Return and Refresh
         new ManageScholar().setVisible(true);
         this.dispose();
     }
-
 
     
 
@@ -237,21 +215,17 @@ public class addscholar extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jLabel11MouseClicked
 
-    private void placeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placeActionPerformed
+    private void DescriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DescriptionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_placeActionPerformed
+    }//GEN-LAST:event_DescriptionActionPerformed
 
-    private void TypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypeActionPerformed
+    private void ScholarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScholarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_TypeActionPerformed
+    }//GEN-LAST:event_ScholarActionPerformed
 
-    private void timedateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timedateActionPerformed
+    private void CategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CategoryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_timedateActionPerformed
-
-    private void ItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ItemActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ItemActionPerformed
+    }//GEN-LAST:event_CategoryActionPerformed
 
     /**
      * @param args the command line arguments
@@ -304,14 +278,12 @@ public class addscholar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JTextField Item;
-    public javax.swing.JTextField Type;
+    public javax.swing.JTextField Category;
+    public javax.swing.JTextField Description;
+    public javax.swing.JTextField Scholar;
     private javax.swing.JPanel addU;
-    public javax.swing.JTextField firstname;
     private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -319,8 +291,5 @@ public class addscholar extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JTextField lastname;
-    public javax.swing.JTextField place;
-    public javax.swing.JTextField timedate;
     // End of variables declaration//GEN-END:variables
 }

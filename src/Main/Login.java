@@ -6,7 +6,7 @@
 package Main;
 
 import Admin.adminDashboard;
-import Admin.Student2Dashboard;
+import Admin.StudentDashboard;
 import Admin.StudentDashboard;
 import Config.config;
 import Config.Session; // Added this to handle user data
@@ -95,11 +95,12 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel4.setLayout(null);
 
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 19)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Login");
         jPanel4.add(jLabel8);
-        jLabel8.setBounds(60, 0, 71, 40);
+        jLabel8.setBounds(31, 0, 100, 50);
 
         jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 190, 40));
 
@@ -222,7 +223,7 @@ public class Login extends javax.swing.JFrame {
                 if (userType.equalsIgnoreCase("Admin")) {
                     new Admin.adminDashboard().setVisible(true);
                 } else if (userType.equalsIgnoreCase("Finder")) {
-                    new Admin.Student2Dashboard().setVisible(true);
+                    new Admin.StudentDashboard().setVisible(true);
                 } else {
                     new Admin.StudentDashboard().setVisible(true);
                 }

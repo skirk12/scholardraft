@@ -70,7 +70,7 @@ public class StudentDashboard extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 130));
 
-        Home1.setBackground(new java.awt.Color(102, 102, 102));
+        Home1.setBackground(new java.awt.Color(51, 153, 255));
         Home1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Home1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -101,7 +101,7 @@ public class StudentDashboard extends javax.swing.JFrame {
 
         jPanel1.add(Home1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 250, 80));
 
-        item.setBackground(new java.awt.Color(102, 102, 102));
+        item.setBackground(new java.awt.Color(0, 153, 255));
         item.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         item.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -137,7 +137,7 @@ public class StudentDashboard extends javax.swing.JFrame {
 
         jPanel1.add(item, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 250, 90));
 
-        Profile1.setBackground(new java.awt.Color(102, 102, 102));
+        Profile1.setBackground(new java.awt.Color(0, 153, 255));
         Profile1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Profile1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -174,7 +174,7 @@ public class StudentDashboard extends javax.swing.JFrame {
 
         jPanel1.add(Profile1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 250, -1));
 
-        setting.setBackground(new java.awt.Color(102, 102, 102));
+        setting.setBackground(new java.awt.Color(0, 153, 255));
         setting.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         setting.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -207,7 +207,7 @@ public class StudentDashboard extends javax.swing.JFrame {
 
         jPanel1.add(setting, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 250, 80));
 
-        logoutBtn.setBackground(new java.awt.Color(102, 102, 102));
+        logoutBtn.setBackground(new java.awt.Color(51, 153, 255));
         logoutBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         logoutBtn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -289,11 +289,11 @@ public class StudentDashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     public void setColor(javax.swing.JPanel p){
-        p.setBackground(new java.awt.Color(240, 240, 240));
+        p.setBackground(new java.awt.Color(51,255,255));
     }
     
     public void resetColor(javax.swing.JPanel p2){
-        p2.setBackground(new java.awt.Color(102, 102, 102));
+        p2.setBackground(new java.awt.Color(0,153,255));
     }
     private void Home1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Home1MouseEntered
         setColor(Home1);

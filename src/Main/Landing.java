@@ -39,7 +39,7 @@ public class Landing extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         Login = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
 
@@ -84,13 +84,12 @@ public class Landing extends javax.swing.JFrame {
         Register.setLayout(null);
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("Register");
         Register.add(jLabel19);
-        jLabel19.setBounds(20, 20, 85, 20);
+        jLabel19.setBounds(30, 20, 85, 25);
 
-        jPanel5.add(Register, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 40, 120, 60));
+        jPanel5.add(Register, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 160, 70));
 
         Login.setBackground(new java.awt.Color(0, 204, 255));
         Login.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -101,17 +100,17 @@ public class Landing extends javax.swing.JFrame {
         });
         Login.setLayout(null);
 
+        jLabel18.setBackground(new java.awt.Color(0, 0, 0));
         jLabel18.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("Sign Up");
         Login.add(jLabel18);
-        jLabel18.setBounds(20, 20, 90, 20);
+        jLabel18.setBounds(30, 20, 90, 25);
 
-        jPanel5.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, 120, 60));
+        jPanel5.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 150, 70));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/gab1.png"))); // NOI18N
-        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, -1, -1));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/image-removgab(1).png"))); // NOI18N
+        jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 230, 160));
 
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 410));
 
@@ -211,10 +210,10 @@ public class Landing extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

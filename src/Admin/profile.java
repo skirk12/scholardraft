@@ -147,7 +147,7 @@ public class profile extends javax.swing.JFrame {
 
         jPanel4.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, 360, 340));
 
-        Edit.setBackground(new java.awt.Color(102, 102, 102));
+        Edit.setBackground(new java.awt.Color(51, 153, 255));
         Edit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel3.setBackground(new java.awt.Color(0, 204, 204));
@@ -164,9 +164,9 @@ public class profile extends javax.swing.JFrame {
         Edit.setLayout(EditLayout);
         EditLayout.setHorizontalGroup(
             EditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EditLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(EditLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
                 .addGap(18, 18, 18))
         );
         EditLayout.setVerticalGroup(
@@ -178,7 +178,7 @@ public class profile extends javax.swing.JFrame {
 
         jPanel4.add(Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 370, 140, -1));
 
-        Back.setBackground(new java.awt.Color(102, 102, 102));
+        Back.setBackground(new java.awt.Color(51, 153, 255));
         Back.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         Back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -186,6 +186,7 @@ public class profile extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setBackground(new java.awt.Color(51, 153, 255));
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("BACK");
@@ -196,8 +197,8 @@ public class profile extends javax.swing.JFrame {
             BackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43))
         );
         BackLayout.setVerticalGroup(
             BackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -275,7 +276,7 @@ public class profile extends javax.swing.JFrame {
         if (Ut.getText().equalsIgnoreCase("Admin")) {
         new adminDashboard().setVisible(true);
     } else if (Ut.getText().equalsIgnoreCase("Loser")) {
-        new Student2Dashboard().setVisible(true);
+        new StudentDashboard().setVisible(true);
     } else {
         new StudentDashboard().setVisible(true);
     }
