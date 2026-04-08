@@ -180,7 +180,7 @@ public class AddScholarship extends javax.swing.JFrame {
     }
     
     public void resetColor(JPanel p2){
-        p2.setBackground(new Color(102, 102, 102));
+        p2.setBackground(new Color(0,153,255));
     }
     
     private void saveMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveMouseEntered

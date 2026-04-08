@@ -52,7 +52,7 @@ public class Landing extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         jLabel1.setText("SCHOLARSHIP SYSTEM");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 440, 30));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, 440, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel3.setText("About");
@@ -89,7 +89,7 @@ public class Landing extends javax.swing.JFrame {
         Register.add(jLabel19);
         jLabel19.setBounds(30, 20, 85, 25);
 
-        jPanel5.add(Register, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 160, 70));
+        jPanel5.add(Register, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, 160, 70));
 
         Login.setBackground(new java.awt.Color(0, 204, 255));
         Login.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -107,10 +107,10 @@ public class Landing extends javax.swing.JFrame {
         Login.add(jLabel18);
         jLabel18.setBounds(30, 20, 90, 25);
 
-        jPanel5.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 150, 70));
+        jPanel5.add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, 150, 70));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/image-removgab(1).png"))); // NOI18N
-        jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 150, 230, 160));
+        jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 170, 230, 160));
 
         jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 410));
 
@@ -120,14 +120,14 @@ public class Landing extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Created By GAB The Great   Email  GABRIEL@email.com   ©2026 The Scholarship System ");
+        jLabel10.setText("Created By Gabriel T. Obeso  Email  Gabrieltalaver8@email.com   ©2026 The Scholarship System ");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(213, Short.MAX_VALUE)
+                .addContainerGap(165, Short.MAX_VALUE)
                 .addComponent(jLabel10)
                 .addGap(96, 96, 96))
         );

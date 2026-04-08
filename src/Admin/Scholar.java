@@ -322,11 +322,11 @@ private void SearchTextKeyReleased(java.awt.event.KeyEvent evt) {
     }// </editor-fold>//GEN-END:initComponents
     
     public void setColor(JPanel p){
-        p.setBackground(new Color(240, 240, 240));
+        p.setBackground(new Color(51,255,255));
     }
     
     public void resetColor(JPanel p2){
-        p2.setBackground(new Color(102, 102, 102));
+        p2.setBackground(new Color(0,153,255));
     }
     
     private void UsersMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UsersMouseEntered

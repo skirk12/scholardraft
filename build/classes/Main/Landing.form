@@ -64,7 +64,7 @@
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="170" y="40" width="440" height="30"/>
+                  <AbsoluteConstraints x="180" y="40" width="440" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -157,7 +157,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="490" y="40" width="160" height="70"/>
+                      <AbsoluteConstraints x="510" y="70" width="160" height="70"/>
                     </Constraint>
                   </Constraints>
 
@@ -197,7 +197,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="290" y="40" width="150" height="70"/>
+                      <AbsoluteConstraints x="290" y="70" width="150" height="70"/>
                     </Constraint>
                   </Constraints>
 
@@ -232,7 +232,7 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="340" y="150" width="230" height="160"/>
+                      <AbsoluteConstraints x="340" y="170" width="230" height="160"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -256,7 +256,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="213" max="32767" attributes="0"/>
+                      <EmptySpace pref="165" max="32767" attributes="0"/>
                       <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
                   </Group>
@@ -281,7 +281,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Created By GAB The Great   Email  GABRIEL@email.com   &#xa9;2026 The Scholarship System "/>
+                <Property name="text" type="java.lang.String" value="Created By Gabriel T. Obeso  Email  Gabrieltalaver8@email.com   &#xa9;2026 The Scholarship System "/>
               </Properties>
             </Component>
           </SubComponents>

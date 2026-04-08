@@ -129,7 +129,7 @@ public class profile extends javax.swing.JFrame {
         Pass.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel1.add(Pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, -1, -1));
 
-        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel4.setBackground(new java.awt.Color(0, 204, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
@@ -145,7 +145,7 @@ public class profile extends javax.swing.JFrame {
         Pw.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jPanel3.add(Pw, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, 150, 20));
 
-        jPanel4.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, 360, 340));
+        jPanel4.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, 360, 240));
 
         Edit.setBackground(new java.awt.Color(51, 153, 255));
         Edit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -165,9 +165,9 @@ public class profile extends javax.swing.JFrame {
         EditLayout.setHorizontalGroup(
             EditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EditLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 103, Short.MAX_VALUE)
-                .addGap(18, 18, 18))
+                .addGap(34, 34, 34)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         EditLayout.setVerticalGroup(
             EditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -176,7 +176,7 @@ public class profile extends javax.swing.JFrame {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel4.add(Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 370, 140, -1));
+        jPanel4.add(Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 290, 140, -1));
 
         Back.setBackground(new java.awt.Color(51, 153, 255));
         Back.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -195,10 +195,10 @@ public class profile extends javax.swing.JFrame {
         Back.setLayout(BackLayout);
         BackLayout.setHorizontalGroup(
             BackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BackLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43))
+            .addGroup(BackLayout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jLabel2)
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         BackLayout.setVerticalGroup(
             BackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,7 +207,7 @@ public class profile extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel4.add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 370, 140, -1));
+        jPanel4.add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 290, 140, -1));
 
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -216,7 +216,7 @@ public class profile extends javax.swing.JFrame {
 
         id.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jPanel5.add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 140, 20));
-        jPanel5.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 560, 10));
+        jPanel5.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 560, 20));
         jPanel5.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 560, 10));
         jPanel5.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 560, 10));
 
@@ -254,7 +254,7 @@ public class profile extends javax.swing.JFrame {
         Fn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jPanel5.add(Fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 150, 30));
 
-        jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 600, 400));
+        jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 550, 380));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 1030, 430));
 

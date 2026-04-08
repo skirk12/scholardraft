@@ -15,50 +15,36 @@ import javax.swing.JPanel;
  */
 public class ManageScholar extends javax.swing.JFrame {
 
-    public ManageScholar() {       
-        // 1. THE GATEKEEPER: Session Check
-        if (Config.Session.userId == 0) {
-            javax.swing.JOptionPane.showMessageDialog(null, "Login Required!");
-            new Main.Login().setVisible(true);
-            this.dispose();
-            return;
-        }
-
-        initComponents();
-        displayScholarships();
+    public ManageScholar() { 
         
-        // Refresh table when window gains focus
-        this.addWindowFocusListener(new java.awt.event.WindowAdapter() {
-            @Override
-            public void windowGainedFocus(java.awt.event.WindowEvent e) {
-                displayScholarships();
-            }
-        });
-    
-
-    // 2. THE CONTENT: Only runs if userId is NOT 0
+        if (Config.Session.userId == 0) {
+        javax.swing.JOptionPane.showMessageDialog(null, "Login Required! Redirecting...");
+        new Main.Login().setVisible(true);
+        this.dispose();
+        return;
+    }
     initComponents();
     displayScholarships();
     
     this.addWindowFocusListener(new java.awt.event.WindowAdapter() {
-        @Override
-        public void windowGainedFocus(java.awt.event.WindowEvent e) {
-            displayScholarships();
+                @Override
+                public void windowGainedFocus(java.awt.event.WindowEvent e) {
+                    displayScholarships();
+                }
+            });
         }
-    });
-}
     
 public void displayScholarships() {
-    config cn = new config();
-    // It is safer to list the specific columns you want to show in the table
-    String sql = "SELECT s_id, s_name, s_category, s_status, s_description, s_deadline FROM tbl_scholarship";
-    
-    try {
-        cn.displayData(sql, Scholarship); 
-    } catch (Exception e) {
-        System.out.println("Error displaying data: " + e.getMessage());
+        config cn = new config();
+        // Updated to match your actual DB columns: s_id, s_name, s_category, s_description, s_deadline, s_status
+        String sql = "SELECT s_id, s_name, s_category, s_description, s_deadline, s_status FROM tbl_scholarship";
+
+        try {
+            cn.displayData(sql, Scholarship);
+        } catch (Exception e) {
+            System.out.println("Error displaying data: " + e.getMessage());
+        }
     }
-}
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -75,16 +61,14 @@ public void displayScholarships() {
         jPanel3 = new javax.swing.JPanel();
         Home = new javax.swing.JPanel();
         Settings = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         Reports = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         SearchText = new javax.swing.JTextField();
-        approve = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
         add = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         update = new javax.swing.JPanel();
@@ -139,17 +123,16 @@ public void displayScholarships() {
                 SettingsMouseExited(evt);
             }
         });
+        Settings.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout SettingsLayout = new javax.swing.GroupLayout(Settings);
-        Settings.setLayout(SettingsLayout);
-        SettingsLayout.setHorizontalGroup(
-            SettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 420, Short.MAX_VALUE)
-        );
-        SettingsLayout.setVerticalGroup(
-            SettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-        );
+        jPanel5.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setText("USER");
+        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 28, -1, -1));
+
+        Settings.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 80));
 
         jPanel3.add(Settings, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 60, 420, -1));
 
@@ -163,57 +146,25 @@ public void displayScholarships() {
             }
         });
         Reports.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel3.add(Reports, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, 70, 80));
+        jPanel3.add(Reports, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, -1, 80));
 
-        jPanel7.setBackground(new java.awt.Color(0, 153, 204));
+        jPanel7.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel7MouseClicked(evt);
+            }
+        });
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("HOME");
+        jPanel7.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(83, 83, 83)
-                .addComponent(jLabel2)
-                .addContainerGap(123, Short.MAX_VALUE))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jLabel2)
-                .addContainerGap(34, Short.MAX_VALUE))
-        );
-
-        jPanel3.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 250, 80));
-
-        jPanel5.setBackground(new java.awt.Color(0, 153, 204));
-
-        jLabel3.setText("USER");
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(99, 99, 99)
-                .addComponent(jLabel3)
-                .addContainerGap(102, Short.MAX_VALUE))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel3)
-                .addContainerGap(32, Short.MAX_VALUE))
-        );
-
-        jPanel3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 240, -1));
+        jPanel3.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 60, 250, 80));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 990, 140));
 
-        jPanel6.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel6.setBackground(new java.awt.Color(0, 204, 255));
         jPanel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -227,7 +178,7 @@ public void displayScholarships() {
         jPanel6.add(jLabel13);
         jLabel13.setBounds(20, 0, 80, 40);
 
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 200, 110, 40));
+        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 110, 40));
 
         SearchText.setForeground(new java.awt.Color(153, 153, 153));
         SearchText.addActionListener(new java.awt.event.ActionListener() {
@@ -240,23 +191,7 @@ public void displayScholarships() {
                 SearchTextKeyReleased(evt);
             }
         });
-        jPanel1.add(SearchText, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 200, 240, 40));
-
-        approve.setBackground(new java.awt.Color(0, 153, 255));
-        approve.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        approve.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                approveMouseClicked(evt);
-            }
-        });
-        approve.setLayout(null);
-
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel14.setText("Approve");
-        approve.add(jLabel14);
-        jLabel14.setBounds(10, 0, 110, 40);
-
-        jPanel1.add(approve, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 130, 40));
+        jPanel1.add(SearchText, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 270, 40));
 
         add.setBackground(new java.awt.Color(51, 153, 255));
         add.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -272,7 +207,7 @@ public void displayScholarships() {
         add.add(jLabel15);
         jLabel15.setBounds(40, 0, 70, 40);
 
-        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 130, 40));
+        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 130, 40));
 
         update.setBackground(new java.awt.Color(51, 153, 255));
         update.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -304,7 +239,7 @@ public void displayScholarships() {
         delete.add(jLabel17);
         jLabel17.setBounds(20, 0, 90, 40);
 
-        jPanel1.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 130, 40));
+        jPanel1.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, 130, 40));
 
         Scholarship.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -319,7 +254,7 @@ public void displayScholarships() {
         ));
         jScrollPane2.setViewportView(Scholarship);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 660, 300));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 740, 320));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -365,33 +300,11 @@ public void displayScholarships() {
 
     private void HomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeMouseClicked
                                                                                  
-    // Redirects back to the Admin Dashboard
     adminDashboard ds = new adminDashboard();
-    ds.setVisible(true);
-    this.dispose();
+        ds.setVisible(true);
+        this.dispose();
 
     }//GEN-LAST:event_HomeMouseClicked
-
-    private void approveMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_approveMouseClicked
-int rowIndex = Scholarship.getSelectedRow();
-
-        if (rowIndex < 0) {
-            JOptionPane.showMessageDialog(null, "Please select a scholarship to approve!");
-        } else {
-            config conf = new config();
-            String id = Scholarship.getValueAt(rowIndex, 0).toString();
-            
-            // FIXED: Table name and column name
-            String sql = "UPDATE tbl_scholarship SET s_status = ? WHERE s_id = ?";
-            
-            conf.updateRecord(sql, "Approved", id);
-            JOptionPane.showMessageDialog(null, "Scholarship Approved!");
-            displayScholarships();
-    }
-
-
-
-    }//GEN-LAST:event_approveMouseClicked
 
     private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
                                             
@@ -401,15 +314,15 @@ int rowIndex = Scholarship.getSelectedRow();
     }//GEN-LAST:event_jPanel6MouseClicked
 
     private void SearchTextKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_SearchTextKeyReleased
-                                                                                       
 config conf = new config();
         String keyword = SearchText.getText().trim();
+
+        // FIXED: Column name changed from s_type to s_category to match your DB image
+        String sql = "SELECT s_id, s_name, s_category, s_description, s_deadline, s_status FROM tbl_scholarship "
+                   + "WHERE s_name LIKE '%" + keyword + "%' "
+                   + "OR s_category LIKE '%" + keyword + "%' "
+                   + "OR s_status LIKE '%" + keyword + "%'";
         
-        // FIXED: Search query for scholarship table
-        String sql = "SELECT s_id, s_name, s_type, s_description, s_status, reported_by, s_deadline FROM tbl_scholarship " +
-                     "WHERE s_name LIKE '%" + keyword + "%' " +
-                     "OR s_type LIKE '%" + keyword + "%' " +
-                     "OR s_status LIKE '%" + keyword + "%'";
         conf.displayData(sql, Scholarship);
   
     }//GEN-LAST:event_SearchTextKeyReleased
@@ -420,64 +333,65 @@ config conf = new config();
 
     private void addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseClicked
                                        
-    addscholar ai = new addscholar();
-    ai.setVisible(true);
-    // Note: We don't dispose here if you want to come back to this page easily
-    this.dispose(); 
+        addscholar ai = new addscholar();
+        ai.setVisible(true);
+        this.dispose();
 
     }//GEN-LAST:event_addMouseClicked
 
     private void updateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateMouseClicked
 int rowIndex = Scholarship.getSelectedRow();
 
-    if (rowIndex < 0) {
-        JOptionPane.showMessageDialog(null, "Please select an item!");
-    } else {
-        config conf = new config();
-        try {
-            // Get the ID from the first column of the selected row
-            String id = Scholarship.getValueAt(rowIndex, 0).toString();
-            java.sql.ResultSet rs = conf.getData("SELECT * FROM tbl_scholarship WHERE s_id = '" + id + "'");
+        if (rowIndex < 0) {
+            JOptionPane.showMessageDialog(null, "Please select an item!");
+        } else {
+            config conf = new config();
+            try {
+                String id = Scholarship.getValueAt(rowIndex, 0).toString();
+                java.sql.ResultSet rs = conf.getData("SELECT * FROM tbl_scholarship WHERE s_id = '" + id + "'");
 
-        if (rs.next()) {
-            addscholar ai = new addscholar();
-            ai.itemId = rs.getInt("s_id");
-            ai.Scholar.setText(rs.getString("s_name"));
+                if (rs.next()) {
+                    scholarupdate su = new scholarupdate();
+                    
+                    // Map Database fields to scholarupdate UI components
+                    su.itemId = rs.getInt("s_id");
+                    su.Scholar.setText(rs.getString("s_name"));
+                    su.Category.setText(rs.getString("s_category"));
+                    su.Description.setText(rs.getString("s_description"));
 
-
-            ai.Description.setText(rs.getString("s_deadline"));
-            ai.jLabel11.setText("UPDATE"); 
-            ai.setVisible(true);
-            this.dispose();
+                    // Set title or label to indicate update mode
+                    su.jLabel11.setText("UPDATE");
+                    
+                    su.setVisible(true);
+                    this.dispose();
+                    
+                    rs.getStatement().getConnection().close();
+                }
+            } catch (java.sql.SQLException ex) {
+                JOptionPane.showMessageDialog(null, "Database Error: " + ex.getMessage());
+            } catch (NullPointerException e) {
+                JOptionPane.showMessageDialog(null, "Error: UI components in scholarupdate might be private!");
             }
-        } catch (java.sql.SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Database Error: " + ex.getMessage());
-        } catch (NullPointerException e) {
-            JOptionPane.showMessageDialog(null, "Component Access Error: Make sure fields are public!");
-        }
-    
         }
 
 
     }//GEN-LAST:event_updateMouseClicked
 
     private void deleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMouseClicked
-                                                                            
-int rowIndex = Scholarship.getSelectedRow();
+    int rowIndex = Scholarship.getSelectedRow();
 
-        if (rowIndex < 0) {
-            JOptionPane.showMessageDialog(null, "Please select an item to delete!");
-            return;
-        }
+            if (rowIndex < 0) {
+                JOptionPane.showMessageDialog(null, "Please select an item to delete!");
+                return;
+            }
 
-        int confirm = JOptionPane.showConfirmDialog(null, "Confirm deletion?", "Warning", JOptionPane.YES_NO_OPTION);
-        if (confirm == JOptionPane.YES_OPTION) {
-            int id = Integer.parseInt(Scholarship.getValueAt(rowIndex, 0).toString());
-            config conf = new config();
-            // FIXED: Target tbl_scholarship
-            conf.deleteData(id, "tbl_scholarship", "s_id");
-            displayScholarships();
-        }
+            int confirm = JOptionPane.showConfirmDialog(null, "Confirm deletion?", "Warning", JOptionPane.YES_NO_OPTION);
+            if (confirm == JOptionPane.YES_OPTION) {
+                int id = Integer.parseInt(Scholarship.getValueAt(rowIndex, 0).toString());
+                config conf = new config();
+                conf.deleteData(id, "tbl_scholarship", "s_id");
+                displayScholarships();
+            }
     }//GEN-LAST:event_deleteMouseClicked
 
     private void ReportsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReportsMouseExited
@@ -487,6 +401,12 @@ int rowIndex = Scholarship.getSelectedRow();
     private void ReportsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ReportsMouseEntered
         setColor(Reports);
     }//GEN-LAST:event_ReportsMouseEntered
+
+    private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
+              adminDashboard Home = new adminDashboard();
+        Home.setVisible(true);
+        dispose();  // TODO add your handling code here:
+    }//GEN-LAST:event_jPanel7MouseClicked
 public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -502,11 +422,9 @@ public static void main(String args[]) {
     private javax.swing.JTextField SearchText;
     private javax.swing.JPanel Settings;
     private javax.swing.JPanel add;
-    private javax.swing.JPanel approve;
     private javax.swing.JPanel delete;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
