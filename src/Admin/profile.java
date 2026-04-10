@@ -124,7 +124,7 @@ public class profile extends javax.swing.JFrame {
         jLabel1.setText("PROFILE");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, -30, -1, 183));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 110));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 130));
 
         Pass.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jPanel1.add(Pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, -1, -1));
@@ -254,9 +254,9 @@ public class profile extends javax.swing.JFrame {
         Fn.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jPanel5.add(Fn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 150, 30));
 
-        jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 550, 380));
+        jPanel4.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 500, 390));
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 1030, 430));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 1070, 450));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

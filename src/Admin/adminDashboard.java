@@ -160,9 +160,9 @@ public class adminDashboard extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Profile");
-        Profile.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 11, 220, 71));
+        Profile.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 11, 190, 71));
 
-        jPanel1.add(Profile, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, -1, 70));
+        jPanel1.add(Profile, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 240, 70));
 
         Users.setBackground(new java.awt.Color(0, 153, 255));
         Users.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -179,12 +179,13 @@ public class adminDashboard extends javax.swing.JFrame {
         });
         Users.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel6.setBackground(new java.awt.Color(0, 153, 255));
         jLabel6.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Manage users");
-        Users.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 3, 220, 80));
+        Users.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 220, 80));
 
-        jPanel1.add(Users, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, -1, 70));
+        jPanel1.add(Users, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 240, 70));
 
         Home.setBackground(new java.awt.Color(51, 153, 255));
         Home.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -220,8 +221,9 @@ public class adminDashboard extends javax.swing.JFrame {
         });
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Mange Applicants");
-        jPanel6.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 16, -1, -1));
+        jPanel6.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
         jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 240, 70));
 
