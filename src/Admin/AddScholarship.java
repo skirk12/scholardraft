@@ -96,7 +96,7 @@ public class AddScholarship extends javax.swing.JFrame {
         jLabel19.setText("User type:");
         jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, -1, -1));
 
-        save.setBackground(new java.awt.Color(102, 102, 102));
+        save.setBackground(new java.awt.Color(0, 204, 255));
         save.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         save.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

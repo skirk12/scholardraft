@@ -101,16 +101,21 @@ public class StudentDashboard extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Home");
+        jLabel8.setText("View Scholarship");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Home1Layout = new javax.swing.GroupLayout(Home1);
         Home1.setLayout(Home1Layout);
         Home1Layout.setHorizontalGroup(
             Home1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Home1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Home1Layout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addGap(23, 23, 23))
         );
         Home1Layout.setVerticalGroup(
             Home1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -406,6 +411,19 @@ public class StudentDashboard extends javax.swing.JFrame {
     private void searchFieldKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchFieldKeyReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_searchFieldKeyReleased
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+// 1. Create an instance of your View Scholarship frame
+    // Make sure the class name matches exactly (e.g., ViewScholarship)
+    Viewscholarship vs = new Viewscholarship(); 
+    
+    // 2. Make the new frame visible
+    vs.setVisible(true);
+    
+    // 3. Close the current Student Hub frame
+    this.dispose(); 
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel8MouseClicked
 
     /**
      * @param args the command line arguments

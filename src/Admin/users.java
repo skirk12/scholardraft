@@ -74,7 +74,6 @@ public class users extends javax.swing.JFrame {
         Settings = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         Reports = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         usertable = new javax.swing.JTable();
         jPanel6 = new javax.swing.JPanel();
@@ -215,24 +214,15 @@ public class users extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("Reports");
-
         javax.swing.GroupLayout ReportsLayout = new javax.swing.GroupLayout(Reports);
         Reports.setLayout(ReportsLayout);
         ReportsLayout.setHorizontalGroup(
             ReportsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReportsLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44))
+            .addGap(0, 250, Short.MAX_VALUE)
         );
         ReportsLayout.setVerticalGroup(
             ReportsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ReportsLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(0, 80, Short.MAX_VALUE)
         );
 
         jPanel3.add(Reports, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, 250, 80));
@@ -393,7 +383,7 @@ public class users extends javax.swing.JFrame {
     }//GEN-LAST:event_HomeMouseClicked
 
     private void AddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddMouseClicked
-        add Add = new add();
+        Viewscholarship Add = new Viewscholarship();
         Add.setVisible(true);
         dispose();
     }//GEN-LAST:event_AddMouseClicked
@@ -494,7 +484,6 @@ public static void main(String args[]) {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
